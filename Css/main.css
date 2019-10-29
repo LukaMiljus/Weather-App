@@ -9,6 +9,22 @@ body {
 .app {
     display: inline-block;
     height: 100vh;
+    width: 40%;
+    overflow: hidden;
+
+}
+
+.contentBg {
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+.title h1{
+    margin: 0 auto auto;
+}
+
+.contentTxt{
+    margin: 20% auto 0;
 }
 
 .temperature {
@@ -22,3 +38,19 @@ font-weight: bold;
 .degree {
     display: inline;
 }
+
+.temperature-des {
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+.clock-section span {
+    font-size: 50px;
+}
+
+.clock-section h4 {
+    margin: auto auto 20px auto;
+    font-size: 30px;
+}
+
+
