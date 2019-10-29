@@ -44,9 +44,34 @@ window.addEventListener('load',()=>{
         })
     }
     function setIcon(icon,iconID) {
-        const skycons = new Skycons({color:"black"});
+        const skycons = new Skycons({color:'white'},{"resizeClear": true});
         const currentIcon = icon.replace(/-/g, "_").toUpperCase();
         skycons.play();
         return skycons.set(iconID, Skycons[currentIcon]);
     }
+
+    //clock
+    const span = document.querySelector(".clock");
+    let backgroundImg = document.querySelector(".app");
+
+    function time() {
+    let d = new Date();
+    let s = d.getSeconds();
+    let m = d.getMinutes();
+    let h = d.getHours();
+    span.textContent = h + ":" + m + ":" + s;
+    if(h > 7 && h < 19){
+        backgroundImg.style.backgroundImage = "url('../Images/WeatherApp-DayBg.jpg')";
+        backgroundImg.style.backgroundRepeat = "no-repeat";
+        backgroundImg.style.backgroundSize = "100% 100%";
+        backgroundImg.style.color = 'white';
+        }else{
+        backgroundImg.style.backgroundImage = "url('../Images/WeatherApp-NightBg.jpg')";
+        backgroundImg.style.backgroundRepeat = "no-repeat";
+        backgroundImg.style.backgroundSize = "100% 100%";
+        backgroundImg.style.color = 'white';
+        }
+    }
+    setInterval(time, 1000);
+
 });
