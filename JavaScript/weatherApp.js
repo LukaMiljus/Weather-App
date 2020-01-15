@@ -57,7 +57,7 @@ window.addEventListener('load',()=>{
     let d = new Date();
     let s = d.getSeconds();
     let m = d.getMinutes();
-    let h = d.getHours()+8;
+    let h = d.getHours();
     let ampm = h >= 12 ? 'pm' : 'am';
     h = h % 12;
     h = h ? h : 12; // the hour '0' should be '12'
